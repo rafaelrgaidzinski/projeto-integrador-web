@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography } from '@mui/material';
+import { Dialog, DialogTitle, DialogActions, Button, Typography } from '@mui/material';
 
 const Login = () => {
   const [username, setUsername] = useState('');

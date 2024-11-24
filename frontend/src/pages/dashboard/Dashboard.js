@@ -11,12 +11,12 @@ import ClientIcon from '@mui/icons-material/People';
 import ReportIcon from '@mui/icons-material/Assessment';
 import SellIcon from '@mui/icons-material/MonetizationOn';
 import LogoutIcon from '@mui/icons-material/Logout';
-import ProductSystem from '../Produtos/ProductSystem';
-import StockSystem from '../Estoque/StockSystem';
-import ClientSystem from '../Clientes/ClientSystem';
+import ProductSystem from '../produtos/ProductSystem';
+import StockSystem from '../estoque/StockSystem';
+import ClientSystem from '../clientes/ClientSystem';
 import HomePage from './HomePage';
-import ReportPage from '../ReportVendas/ReportPage';
-import SalesSystem from '../Vendas/SalesSystem';
+import ReportPage from '../relatorios/ReportPage';
+import SalesSystem from '../vendas/SalesSystem';
 
 const drawerWidth = 240;
 
