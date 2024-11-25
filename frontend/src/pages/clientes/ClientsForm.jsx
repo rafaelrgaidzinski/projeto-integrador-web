@@ -4,6 +4,7 @@ import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
 
+
 const ClientsForm = () => {
     const isNonMobile = useMediaQuery("(min-width: 600px)");
 
@@ -25,23 +26,49 @@ const ClientsForm = () => {
                                 label="Nome"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.firstName}
-                                name="firstName"
-                                error={!!touched.firstName && !!errors.firstName}
-                                helperText={touched.firstName && errors.firstName}
+                                value={values.name}
+                                name="name"
+                                error={!!touched.name && !!errors.name}
+                                helperText={touched.name && errors.name}
+                                sx={{ gridColumn: "span 2" }}
+                            />
+                             <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Data de Nascimento"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.birthdate}
+                                name="birthdate"
+                                error={!!touched.birthdate && !!errors.birthdate}
+                                helperText={touched.birthdate && errors.birthdate}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Sobrenome"
+                                label="CPF"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.lastName}
-                                name="lastName"
-                                error={!!touched.lastName && !!errors.lastName}
-                                helperText={touched.lastName && errors.lastName}
+                                value={values.cpf}
+                                name="cpf"
+                                error={!!touched.cpf && !!errors.cpf}
+                                helperText={touched.cpf && errors.cpf}
+                                sx={{ gridColumn: "span 2" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Telefone"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.phone}
+                                name="phone"
+                                error={!!touched.phone && !!errors.phone}
+                                helperText={touched.phone && errors.phone}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
@@ -55,45 +82,86 @@ const ClientsForm = () => {
                                 name="email"
                                 error={!!touched.email && !!errors.email}
                                 helperText={touched.email && errors.email}
+                                sx={{ gridColumn: "span 2" }}
+                            />
+                        </Box>
+                        <Box display="grid" gap="30px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }}}>
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Rua"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.street}
+                                name="street"
+                                error={!!touched.street && !!errors.street}
+                                helperText={touched.street && errors.street}
+                                sx={{ gridColumn: "span 2" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Número"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.number}
+                                name="number"
+                                error={!!touched.number && !!errors.number}
+                                helperText={touched.number && errors.number}
+                                sx={{ gridColumn: "span 1" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="CEP"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.cep}
+                                name="cep"
+                                error={!!touched.cep && !!errors.cep}
+                                helperText={touched.cep && errors.cep}
+                                sx={{ gridColumn: "span 1" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Cidade"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.city}
+                                name="city"
+                                error={!!touched.city && !!errors.city}
+                                helperText={touched.city && errors.city}
                                 sx={{ gridColumn: "span 4" }}
                             />
                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Telefone"
+                                label="Bairro"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.contact}
-                                name="contact"
-                                error={!!touched.contact && !!errors.contact}
-                                helperText={touched.contact && errors.contact}
+                                value={values.district}
+                                name="district"
+                                error={!!touched.district && !!errors.district}
+                                helperText={touched.district && errors.district}
                                 sx={{ gridColumn: "span 4" }}
                             />
                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Endereço 1"
+                                label="UF"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.address1}
-                                name="address1"
-                                error={!!touched.address1 && !!errors.address1}
-                                helperText={touched.address1 && errors.address1}
-                                sx={{ gridColumn: "span 4" }}
-                            />
-                            <TextField
-                                fullWidth
-                                variant="filled"
-                                type="text"
-                                label="Endereço 2"
-                                onBlur={handleBlur}
-                                onChange={handleChange}
-                                value={values.address2}
-                                name="address2"
-                                error={!!touched.address2 && !!errors.address2}
-                                helperText={touched.address2 && errors.address2}
+                                value={values.uf}
+                                name="uf"
+                                error={!!touched.uf && !!errors.uf}
+                                helperText={touched.uf && errors.uf}
                                 sx={{ gridColumn: "span 4" }}
                             />
                         </Box>
@@ -107,24 +175,33 @@ const ClientsForm = () => {
     )
 }
 
-const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+//const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+const phoneRegExp = /^(?:(^\\+\\d{2})?)(?:([1-9]{2})|([0-9]{3})?)(\\d{4,5}).?(\\d{4})$/
 
 const userSchema = yup.object().shape({
-    firstName: yup.string().required("Campo obrigatório"),
-    lastName: yup.string().required("Campo obrigatório"),
+    name: yup.string().required("Campo obrigatório"),
+    cpf: yup.string().required("Campo obrigatório"),
+    phone: yup.string().matches(phoneRegExp, "Número de telefone inválido").required("Campo obrigatório"),
     email: yup.string().email("E-mail inválido").required("Campo obrigatório"),
-    contact: yup.string().matches(phoneRegExp, "Número de telefone inválido").required("Campo obrigatório"),
-    address1: yup.string().required("Campo obrigatório"),
-    address2: yup.string().required("Campo obrigatório")
+    street: yup.string().required("Campo obrigatório"),
+    number: yup.string().required("Campo obrigatório"),
+    cep: yup.string().required("Campo obrigatório"),
+    city: yup.string().required("Campo obrigatório"),
+    district: yup.string().required("Campo obrigatório"),
+    uf: yup.string().required("Campo obrigatório")
 });
 
 const initialValues = {
-    firstName: "",
-    lastName: "",
+    name: "",
+    cpf: "",
+    phone: "",
     email: "",
-    contact: "",
-    address1: "",
-    address2: ""
+    street: "",
+    number: "",
+    cep: "",
+    city: "",
+    district: "",
+    uf: ""
 };
 
 export default ClientsForm;

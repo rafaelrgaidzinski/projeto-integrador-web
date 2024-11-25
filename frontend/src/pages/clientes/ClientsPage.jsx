@@ -6,26 +6,25 @@ import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 
 
-
 const Clients = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const columns = [
         {
-          field: "name",
+          field: "nome",
           headerName: "Nome",
           flex: 1,
           cellClassName: "name-column--cell",
         },
         {
-          field: "age",
-          headerName: "Idade",
+          field: "cpf",
+          headerName: "CPF",
           type: "number",
           headerAlign: "left",
           align: "left",
         },
         {
-          field: "phone",
+          field: "telefone",
           headerName: "Telefone",
           flex: 1,
         },
@@ -35,20 +34,10 @@ const Clients = () => {
           flex: 1,
         },
         {
-          field: "address",
+          field: "endereco",
           headerName: "Endereço",
           flex: 1,
-        },
-        {
-          field: "city",
-          headerName: "Cidade",
-          flex: 1,
-        },
-        {
-          field: "zipCode",
-          headerName: "CEP",
-          flex: 1,
-        },
+        }
       ];
 
     return (
