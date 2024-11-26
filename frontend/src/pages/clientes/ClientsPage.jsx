@@ -28,7 +28,7 @@ const Clients = () => {
         {
           field: "birthdate",
           headerName: "Data de Nascimento",
-          type: "date",
+          type: "Date",
           headerAlign: "left",
           align: "left",
         },

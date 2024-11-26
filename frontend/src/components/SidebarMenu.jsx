@@ -7,7 +7,7 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
-import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
+import StoreOutlinedIcon from '@mui/icons-material/StoreOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import MedicationOutlinedIcon from '@mui/icons-material/MedicationOutlined';
@@ -78,9 +78,9 @@ const SidebarMenu = () => {
                   <Item title="Dashboard" to="/" icon={<HomeOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Produtos" to="/produtos" icon={<MedicationOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Clientes" to="/clientes" icon={<PeopleOutlinedIcon/>} selected={selected} setSelected={setSelected} />
+                  <Item title="Fornecedores" to="/fornecedores" icon={<StoreOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Vendas" to="/vendas" icon={<AttachMoneyOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Compras" to="/compras" icon={<ShoppingCartOutlinedIcon/>} selected={selected} setSelected={setSelected} />
-                  <Item title="Calendario" to="/calendario" icon={<CalendarTodayOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Relatorios" to="/relatorios" icon={<AssessmentOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Configurações" to="/configuracoes" icon={<SettingsOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                 </Box>

@@ -170,7 +170,7 @@ const ClientsForm = () => {
                         <Box display="flex" justifyContent="end" mt="60px" sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
                             <Button type="submit" variant="contained" sx={{backgroundColor: colors.blueAccent[700], color: "#fff", fontSize: "14px", fontWeight: "bold", padding: "10px 20px", width: "200px", mb:"30px"}}>
                                 <SaveOutlinedIcon sx={{ mr: "10px" }} />
-                                Cadastrar Cliente
+                                Salvar
                             </Button>
                         </Box>
                     </form>
