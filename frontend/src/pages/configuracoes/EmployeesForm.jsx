@@ -7,7 +7,7 @@ import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
 import Header from "../../components/Header";
 
 
-const ClientsForm = () => {
+const EmployeesForm = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const isNonMobile = useMediaQuery("(min-width: 600px)");
@@ -18,7 +18,7 @@ const ClientsForm = () => {
 
     return (
         <Box m={"30px"}>
-            <Header title={"Cadastro de Fornecedores"}/>
+            <Header title={"Cadastro de Funcionários"}/>
             <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={userSchema}>
                 {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
@@ -27,39 +27,39 @@ const ClientsForm = () => {
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Fornecedor"
+                                label="Nome"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.supplier}
-                                name="supplier"
-                                error={!!touched.supplier && !!errors.supplier}
-                                helperText={touched.supplier && errors.supplier}
+                                value={values.name}
+                                name="name"
+                                error={!!touched.name && !!errors.name}
+                                helperText={touched.name && errors.name}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="CNPJ"
+                                label="CPF"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.cnpj}
-                                name="cnpj"
-                                error={!!touched.cnpj && !!errors.cnpj}
-                                helperText={touched.cnpj && errors.cnpj}
+                                value={values.cpf}
+                                name="cpf"
+                                error={!!touched.cpf && !!errors.cpf}
+                                helperText={touched.cpf && errors.cpf}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Responsável"
+                                label="E-mail"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.inCharge}
-                                name="inCharge"
-                                error={!!touched.inCharge && !!errors.inCharge}
-                                helperText={touched.inCharge && errors.inCharge}
+                                value={values.email}
+                                name="email"
+                                error={!!touched.email && !!errors.email}
+                                helperText={touched.email && errors.email}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
@@ -79,39 +79,39 @@ const ClientsForm = () => {
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="E-mail"
+                                label="Cargo"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.email}
-                                name="email"
-                                error={!!touched.email && !!errors.email}
-                                helperText={touched.email && errors.email}
+                                value={values.role}
+                                name="role"
+                                error={!!touched.role && !!errors.role}
+                                helperText={touched.role && errors.role}
                                 sx={{ gridColumn: "span 2" }}
                             />
-                             <TextField
+                            <TextField
                                 fullWidth
                                 variant="filled"
-                                type="text"
-                                label="Formas de Pagamento"
+                                type="number"
+                                label="Salário"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.payment}
-                                name="payment"
-                                error={!!touched.payment && !!errors.payment}
-                                helperText={touched.payment && errors.payment}
-                                sx={{ gridColumn: "span 3" }}
+                                value={values.salary}
+                                name="salary"
+                                error={!!touched.salary && !!errors.salary}
+                                helperText={touched.salary && errors.salary}
+                                sx={{ gridColumn: "span 1" }}
                             />
-                             <TextField
+                            <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Prazo de Entrega"
+                                label="Data de Contratação"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.delivery}
-                                name="delivery"
-                                error={!!touched.delivery && !!errors.delivery}
-                                helperText={touched.delivery && errors.delivery}
+                                value={values.hiredate}
+                                name="hiredate"
+                                error={!!touched.hiredate && !!errors.hiredate}
+                                helperText={touched.hiredate && errors.hiredate}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
@@ -209,13 +209,13 @@ const ClientsForm = () => {
 const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const userSchema = yup.object().shape({
-    supplier: yup.string().required("Campo obrigatório"),
-    cnpj: yup.string().required("Campo obrigatório"),
-    inCharge: yup.string().required("Campo obrigatório"),
+    name: yup.string().required("Campo obrigatório"),
+    cpf: yup.string().required("Campo obrigatório"),
     phone: yup.string().matches(phoneRegExp, "Número de telefone inválido").required("Campo obrigatório"),
     email: yup.string().email("E-mail inválido").required("Campo obrigatório"),
-    payment: yup.string().required("Campo obrigatório"),
-    delivery: yup.string().required("Campo obrigatório"),
+    hiredate: yup.string().required("Campo obrigatório"),
+    salary: yup.string().required("Campo obrigatório"),
+    role: yup.string().required("Campo obrigatório"),
     street: yup.string().required("Campo obrigatório"),
     number: yup.string().required("Campo obrigatório"),
     cep: yup.string().required("Campo obrigatório"),
@@ -225,13 +225,13 @@ const userSchema = yup.object().shape({
 });
 
 const initialValues = {
-    supplier: "",
-    cnpj: "",
-    inCharge: "",
+    name: "",
+    cpf: "",
     phone: "",
     email: "",
-    payment: "",
-    delivery: "",
+    hiredate: "",
+    salary: "",
+    role: "",
     street: "",
     number: "",
     cep: "",
@@ -240,4 +240,4 @@ const initialValues = {
     uf: ""
 };
 
-export default ClientsForm;
+export default EmployeesForm;

@@ -9,7 +9,9 @@ import Clients from "./pages/clientes/ClientsPage"
 import ClientsForm from './pages/clientes/ClientsForm';
 import Suppliers from "./pages/fornecedores/SuppliersPage"
 import SuppliersForm from './pages/fornecedores/SuppliersForm';
-
+import EmployeesForm from "./pages/configuracoes/EmployeesForm";
+import Products from "./pages/produtos/ProductsPage";
+import ProductsForm from './pages/produtos/ProductsForm';
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -25,6 +27,9 @@ const App = () => {
               <Routes>
                 <Route path='/' element={<Dashboard/>} />
                 <Route path='/configuracoes' element={<Settings/>} />
+                <Route path='/funcionarios/cadastro' element={<EmployeesForm/>} />
+                <Route path='/produtos' element={<Products/>} />
+                <Route path='/produtos/cadastro' element={<ProductsForm/>} />
                 <Route path='/clientes' element={<Clients/>} />
                 <Route path='/clientes/cadastro' element={<ClientsForm/>} />
                 <Route path='/fornecedores' element={<Suppliers/>} />
