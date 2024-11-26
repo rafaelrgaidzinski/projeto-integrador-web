@@ -18,7 +18,7 @@ const ClientsForm = () => {
 
     return (
         <Box m={"30px"}>
-            <Header title={"Cadastro de Clientes"}/>
+            <Header title={"Cadastro de Fornecedores"}/>
             <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={userSchema}>
                 {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
@@ -27,39 +27,52 @@ const ClientsForm = () => {
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Nome"
+                                label="Fornecedor"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.name}
-                                name="name"
-                                error={!!touched.name && !!errors.name}
-                                helperText={touched.name && errors.name}
+                                value={values.supplier}
+                                name="supplier"
+                                error={!!touched.supplier && !!errors.supplier}
+                                helperText={touched.supplier && errors.supplier}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="CPF"
+                                label="CNPJ"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.cpf}
-                                name="cpf"
-                                error={!!touched.cpf && !!errors.cpf}
-                                helperText={touched.cpf && errors.cpf}
+                                value={values.cnpj}
+                                name="cnpj"
+                                error={!!touched.cnpj && !!errors.cnpj}
+                                helperText={touched.cnpj && errors.cnpj}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Data de Nascimento"
+                                label="Responsável"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.birthdate}
-                                name="birthdate"
-                                error={!!touched.birthdate && !!errors.birthdate}
-                                helperText={touched.birthdate && errors.birthdate}
+                                value={values.inCharge}
+                                name="inCharge"
+                                error={!!touched.inCharge && !!errors.inCharge}
+                                helperText={touched.inCharge && errors.inCharge}
+                                sx={{ gridColumn: "span 2" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Telefone"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.phone}
+                                name="phone"
+                                error={!!touched.phone && !!errors.phone}
+                                helperText={touched.phone && errors.phone}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
@@ -75,17 +88,30 @@ const ClientsForm = () => {
                                 helperText={touched.email && errors.email}
                                 sx={{ gridColumn: "span 2" }}
                             />
-                            <TextField
+                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Telefone"
+                                label="Formas de Pagamento"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.phone}
-                                name="phone"
-                                error={!!touched.phone && !!errors.phone}
-                                helperText={touched.phone && errors.phone}
+                                value={values.payment}
+                                name="payment"
+                                error={!!touched.payment && !!errors.payment}
+                                helperText={touched.payment && errors.payment}
+                                sx={{ gridColumn: "span 3" }}
+                            />
+                             <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Prazo de Entrega"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.delivery}
+                                name="delivery"
+                                error={!!touched.delivery && !!errors.delivery}
+                                helperText={touched.delivery && errors.delivery}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
@@ -170,7 +196,7 @@ const ClientsForm = () => {
                         <Box display="flex" justifyContent="end" mt="60px" sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
                             <Button type="submit" variant="contained" sx={{backgroundColor: colors.blueAccent[700], color: "#fff", fontSize: "14px", fontWeight: "bold", padding: "10px 20px", width: "200px", mb:"30px"}}>
                                 <SaveOutlinedIcon sx={{ mr: "10px" }} />
-                                Cadastrar Cliente
+                                Cadastrar Fornecedor
                             </Button>
                         </Box>
                     </form>

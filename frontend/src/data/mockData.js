@@ -1,5 +1,220 @@
 import { tokens } from "../theme";
 
+export const mockDataClients = [
+  {
+    id: 1,
+    name: "Jon Snow",
+    cpf: "123.456.789-00", 
+    birthdate: "1989-01-01", 
+    phone: "(665)121-5454",
+    email: "jonsnow@gmail.com",
+    address: "Rua Won, 912, Alabama, 10001-000, SY"
+  },
+  {
+    id: 2,
+    name: "Cersei Lannister",
+    cpf: "987.654.321-00", 
+    birthdate: "1982-01-01", 
+    phone: "(421)314-2288",
+    email: "cerseilannister@gmail.com",
+    address: "Rua Main, 1234, Centro, 10001-000, NY"
+  },
+  {
+    id: 3,
+    name: "Jaime Lannister",
+    cpf: "321.654.987-00", 
+    birthdate: "1979-01-01", 
+    phone: "(422)982-6739",
+    email: "jaimelannister@gmail.com",
+    address: "Avenida Want, 3333, Estanza, 42125-000, NAY"
+  },
+  {
+    id: 4,
+    name: "Anya Stark",
+    cpf: "741.852.963-00", 
+    birthdate: "2008-01-01", 
+    phone: "(921)425-6742",
+    email: "anyastark@gmail.com",
+    address: "Rua Main, 1514, Centro, 22298-000, NY"
+  },
+  {
+    id: 5,
+    name: "Daenerys Targaryen",
+    cpf: "963.741.852-00", 
+    birthdate: "1993-01-01", 
+    phone: "(421)445-1189",
+    email: "daenerystargaryen@gmail.com",
+    address: "Avenida Welping, 11122, Bairro Tenting, 21321-000, CD"
+  },
+  {
+    id: 6,
+    name: "Ever Melisandre",
+    cpf: "159.753.486-00", 
+    birthdate: "1874-01-01", 
+    phone: "(232)545-6483",
+    email: "evermelisandre@gmail.com",
+    address: "Rua Canvile, 1234, Esvazark, 10001-000, NY"
+  },
+  {
+    id: 7,
+    name: "Ferrara Clifford",
+    cpf: "852.147.369-00", 
+    birthdate: "1980-01-01", 
+    phone: "(543)124-0123",
+    email: "ferraraclifford@gmail.com",
+    address: "Rua Super, 22215, Everting, 51523-000, ZO"
+  },
+  {
+    id: 8,
+    name: "Rossini Frances",
+    cpf: "258.369.147-00", 
+    birthdate: "1988-01-01", 
+    phone: "(222)444-5555",
+    email: "rossinifrances@gmail.com",
+    address: "Avenida Ever, 4123, Wentington, 14221-000, AD"
+  },
+  {
+    id: 9,
+    name: "Harvey Roxie",
+    cpf: "753.159.258-00", 
+    birthdate: "1959-01-01", 
+    phone: "(444)555-6239",
+    email: "harveyroxie@gmail.com",
+    address: "Rua Avery, 51234, Bairro Cantory, 212412-000, ND"
+  },
+  {
+    id: 10,
+    name: "Enteri Redack",
+    cpf: "963.258.741-00", 
+    birthdate: "1982-01-01", 
+    phone: "(222)444-5555",
+    email: "enteriredack@gmail.com",
+    address: "Avenida Easer, 4123, Wentington, 14221-000, AD"
+  },
+  {
+    id: 11,
+    name: "Steve Goodman",
+    cpf: "159.753.852-00", 
+    birthdate: "2013-01-01", 
+    phone: "(444)555-6239",
+    email: "stevegoodmane@gmail.com",
+    address: "Rua Fiveton, 51234, CunFory, 212412-000, ND"
+  }
+];
+
+export const mockDataSuppliers = [
+  {
+    id: 1,
+    supplier: "Tech Solutions Ltda",
+    cnpj: "12.345.678/0001-90",
+    inCharge: "Carlos Silva",
+    phone: "(11) 98765-4321",
+    email: "contato@techsolutions.com.br",
+    payment: ["Boleto", "Cartão de Crédito", "Transferência Bancária"],
+    delivery: 5,
+    address: "Rua dos Tecnólogos, 123, Tech Park, 01234-567, São Paulo, SP"
+  },
+  {
+    id: 2,
+    supplier: "EcoGoods Ltda",
+    cnpj: "98.765.432/0001-12",
+    inCharge: "Ana Costa",
+    phone: "(21) 99876-5432",
+    email: "suporte@ecogoods.com.br",
+    payment: ["Boleto", "Pix", "Cartão de Crédito"],
+    delivery: 7,
+    address: "Avenida Verde, 456, EcoCentro, 23456-789, Rio de Janeiro, RJ"
+  },
+  {
+    id: 3,
+    supplier: "Fast Delivery Inc",
+    cnpj: "23.456.789/0001-34",
+    inCharge: "Rafael Lima",
+    phone: "(41) 91234-5678",
+    email: "contact@fastdelivery.com.br",
+    payment: ["Cartão de Crédito", "Transferência Bancária"],
+    delivery: 3,
+    address: "Rua das Entregas, 789, Logística, 34567-890, Curitiba, PR"
+  },
+  {
+    id: 4,
+    supplier: "Fashion World Ltda",
+    cnpj: "56.789.123/0001-56",
+    inCharge: "Juliana Pereira",
+    phone: "(51) 93322-4455",
+    email: "atendimento@fashionworld.com.br",
+    payment: ["Boleto", "Cartão de Crédito", "Pix"],
+    delivery: 10,
+    address: "Rua das Roupas, 101, Moda Fashion, 45678-123, Porto Alegre, RS"
+  },
+  {
+    id: 5,
+    supplier: "HomeTech Solutions",
+    cnpj: "34.567.890/0001-78",
+    inCharge: "Lucas Almeida",
+    phone: "(61) 98888-9999",
+    email: "info@hometechsolutions.com.br",
+    payment: ["Boleto", "Cartão de Crédito", "Pix"],
+    delivery: 6,
+    address: "Quadra 2, Bloco B, 12, Tecnologia, 56789-234, Brasília, DF"
+  },
+  {
+    id: 6,
+    supplier: "Super Mercado S/A",
+    cnpj: "45.678.901/0001-23",
+    inCharge: "Fernanda Oliveira",
+    phone: "(71) 99876-1122",
+    email: "vendas@supermercado.com.br",
+    payment: ["Boleto", "Pix", "Cartão de Débito"],
+    delivery: 4,
+    address: "Avenida Central, 200, Centro, 67890-345, Salvador, BA"
+  },
+  {
+    id: 7,
+    supplier: "Gourmet Foods Ltda",
+    cnpj: "67.890.123/0001-45",
+    inCharge: "Eduardo Souza",
+    phone: "(11) 94567-1234",
+    email: "contato@gourmetfoods.com.br",
+    payment: ["Boleto", "Cartão de Crédito"],
+    delivery: 12,
+    address: "Rua do Sabor, 345, Gourmet, 78901-234, São Paulo, SP"
+  },
+  {
+    id: 8,
+    supplier: "Pet Shop Plus",
+    cnpj: "12.345.678/0001-67",
+    inCharge: "Patrícia Gomes",
+    phone: "(85) 99865-4321",
+    email: "atendimento@petshopplus.com.br",
+    payment: ["Boleto", "Pix", "Cartão de Crédito"],
+    delivery: 8,
+    address: "Rua dos Animais, 567, Petópolis, 89012-345, Fortaleza, CE"
+  },
+  {
+    id: 9,
+    supplier: "Car Parts & Co",
+    cnpj: "78.901.234/0001-89",
+    inCharge: "Felipe Martins",
+    phone: "(51) 99876-3344",
+    email: "contato@carpartsco.com.br",
+    payment: ["Boleto", "Transferência Bancária", "Cartão de Crédito"],
+    delivery: 14,
+    address: "Avenida dos Carros, 890, AutoPeças, 90123-456, Porto Alegre, RS"
+  },
+  {
+    id: 10,
+    supplier: "Books & More",
+    cnpj: "23.456.789/0001-01",
+    inCharge: "Mariana Alves",
+    phone: "(61) 98123-4567",
+    email: "suporte@booksandmore.com.br",
+    payment: ["Boleto", "Cartão de Crédito", "Pix"],
+    delivery: 5,
+    address: "Rua dos Livros, 234, Livraria, 23456-789, Brasília, DF"
+  }
+];
+
 export const mockDataTeam = [
   {
     id: 1,
@@ -72,197 +287,6 @@ export const mockDataTeam = [
     age: 65,
     phone: "(444)555-6239",
     access: "admin",
-  },
-];
-
-export const mockDataContacts = [
-  {
-    id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
-    age: 35,
-    phone: "(665)121-5454",
-    address: "0912 Won Street, Alabama, SY 10001",
-    city: "New York",
-    zipCode: "10001",
-    registrarId: 123512,
-  },
-  {
-    id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    age: 42,
-    phone: "(421)314-2288",
-    address: "1234 Main Street, New York, NY 10001",
-    city: "New York",
-    zipCode: "13151",
-    registrarId: 123512,
-  },
-  {
-    id: 3,
-    name: "Jaime Lannister",
-    email: "jaimelannister@gmail.com",
-    age: 45,
-    phone: "(422)982-6739",
-    address: "3333 Want Blvd, Estanza, NAY 42125",
-    city: "New York",
-    zipCode: "87281",
-    registrarId: 4132513,
-  },
-  {
-    id: 4,
-    name: "Anya Stark",
-    email: "anyastark@gmail.com",
-    age: 16,
-    phone: "(921)425-6742",
-    address: "1514 Main Street, New York, NY 22298",
-    city: "New York",
-    zipCode: "15551",
-    registrarId: 123512,
-  },
-  {
-    id: 5,
-    name: "Daenerys Targaryen",
-    email: "daenerystargaryen@gmail.com",
-    age: 31,
-    phone: "(421)445-1189",
-    address: "11122 Welping Ave, Tenting, CD 21321",
-    city: "Tenting",
-    zipCode: "14215",
-    registrarId: 123512,
-  },
-  {
-    id: 6,
-    name: "Ever Melisandre",
-    email: "evermelisandre@gmail.com",
-    age: 150,
-    phone: "(232)545-6483",
-    address: "1234 Canvile Street, Esvazark, NY 10001",
-    city: "Esvazark",
-    zipCode: "10001",
-    registrarId: 123512,
-  },
-  {
-    id: 7,
-    name: "Ferrara Clifford",
-    email: "ferraraclifford@gmail.com",
-    age: 44,
-    phone: "(543)124-0123",
-    address: "22215 Super Street, Everting, ZO 515234",
-    city: "Evertin",
-    zipCode: "51523",
-    registrarId: 123512,
-  },
-  {
-    id: 8,
-    name: "Rossini Frances",
-    email: "rossinifrances@gmail.com",
-    age: 36,
-    phone: "(222)444-5555",
-    address: "4123 Ever Blvd, Wentington, AD 142213",
-    city: "Esteras",
-    zipCode: "44215",
-    registrarId: 512315,
-  },
-  {
-    id: 9,
-    name: "Harvey Roxie",
-    email: "harveyroxie@gmail.com",
-    age: 65,
-    phone: "(444)555-6239",
-    address: "51234 Avery Street, Cantory, ND 212412",
-    city: "Colunza",
-    zipCode: "111234",
-    registrarId: 928397,
-  },
-  {
-    id: 10,
-    name: "Enteri Redack",
-    email: "enteriredack@gmail.com",
-    age: 42,
-    phone: "(222)444-5555",
-    address: "4123 Easer Blvd, Wentington, AD 142213",
-    city: "Esteras",
-    zipCode: "44215",
-    registrarId: 533215,
-  },
-  {
-    id: 11,
-    name: "Steve Goodman",
-    email: "stevegoodmane@gmail.com",
-    age: 11,
-    phone: "(444)555-6239",
-    address: "51234 Fiveton Street, CunFory, ND 212412",
-    city: "Colunza",
-    zipCode: "1234",
-    registrarId: 92197,
-  },
-];
-
-export const mockDataInvoices = [
-  {
-    id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
-    cost: "21.24",
-    phone: "(665)121-5454",
-    date: "03/12/2022",
-  },
-  {
-    id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    cost: "1.24",
-    phone: "(421)314-2288",
-    date: "06/15/2021",
-  },
-  {
-    id: 3,
-    name: "Jaime Lannister",
-    email: "jaimelannister@gmail.com",
-    cost: "11.24",
-    phone: "(422)982-6739",
-    date: "05/02/2022",
-  },
-  {
-    id: 4,
-    name: "Anya Stark",
-    email: "anyastark@gmail.com",
-    cost: "80.55",
-    phone: "(921)425-6742",
-    date: "03/21/2022",
-  },
-  {
-    id: 5,
-    name: "Daenerys Targaryen",
-    email: "daenerystargaryen@gmail.com",
-    cost: "1.24",
-    phone: "(421)445-1189",
-    date: "01/12/2021",
-  },
-  {
-    id: 6,
-    name: "Ever Melisandre",
-    email: "evermelisandre@gmail.com",
-    cost: "63.12",
-    phone: "(232)545-6483",
-    date: "11/02/2022",
-  },
-  {
-    id: 7,
-    name: "Ferrara Clifford",
-    email: "ferraraclifford@gmail.com",
-    cost: "52.42",
-    phone: "(543)124-0123",
-    date: "02/11/2022",
-  },
-  {
-    id: 8,
-    name: "Rossini Frances",
-    email: "rossinifrances@gmail.com",
-    cost: "21.24",
-    phone: "(222)444-5555",
-    date: "05/02/2021",
   },
 ];
 

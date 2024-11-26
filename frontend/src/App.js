@@ -7,11 +7,8 @@ import Dashboard from "./pages/dashboard/DashboardPage"
 import Settings from "./pages/configuracoes/SettingsPage"
 import Clients from "./pages/clientes/ClientsPage"
 import ClientsForm from './pages/clientes/ClientsForm';
-// import Purchase from "./pages/compras/PurchasePage"
-// import Login from "./pages/login/LoginPage"
-// import Register from "./pages/login/RegisterPage"
-// import Products from "./pages/produtos/ProductsPage"
-// import Sales from "./pages/vendas/SalesPage"
+import Suppliers from "./pages/fornecedores/SuppliersPage"
+import SuppliersForm from './pages/fornecedores/SuppliersForm';
 
 
 const App = () => {
@@ -29,14 +26,9 @@ const App = () => {
                 <Route path='/' element={<Dashboard/>} />
                 <Route path='/configuracoes' element={<Settings/>} />
                 <Route path='/clientes' element={<Clients/>} />
-                <Route path='/calendario' element={<ClientsForm/>} />
-                {/* <Route path='/register' element={<Register/>} />
-                <Route path='/login' element={<Login/>} />
-                <Route path='/produtos' element={<Products/>} />
-                <Route path='/vendas' element={<Sales/>} />
-                <Route path='/compras' element={<Purchase/>} />
-                <Route path='/calendario' element={<Calendar/>} />
-                <Route path='/relatorios' element={<Report/>} /> */}
+                <Route path='/clientes/cadastro' element={<ClientsForm/>} />
+                <Route path='/fornecedores' element={<Suppliers/>} />
+                <Route path='/fornecedores/cadastro' element={<SuppliersForm/>} />
               </Routes>
             </main>
         </div>
