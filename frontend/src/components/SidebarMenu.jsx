@@ -18,9 +18,11 @@ const Item = ({ icon, title, to, selected, setSelected }) => {
   const colors = tokens(theme.palette.mode);
 
   return (
+    <Link to={to} style={{ textDecoration: "none", fontSize: "16px", color: colors.grey[100]}}>
     <MenuItem active={selected === title} style={{ color: colors.grey[100] }} onClick={() => setSelected(title)} icon={icon}>
-      <Link to={to} style={{ textDecoration: "none", fontSize: "16px", color: colors.grey[100]}}>{title}</Link>
-    </MenuItem>
+      <Typography>{title}</Typography>
+      </MenuItem>
+    </Link>
   );
 };
 
@@ -34,7 +36,7 @@ const SidebarMenu = () => {
     return (
         <Box sx={{ display: "flex", height: "100%",
             "& .MuiButtonBase-root .MuiSvgIcon-root": { color: `${colors.grey[100]} !important`, backgroundColor: "transparent !important",},
-            "& .ps-menu-button.ps-active a": { color: `${colors.greenAccent[500]} !important`, backgroundColor: "transparent !important" },
+            "& .ps-menu-button.ps-active p": { color: `${colors.greenAccent[500]} !important`, backgroundColor: "transparent !important" },
             "& .ps-menu-button.ps-active svg": { color: `${colors.greenAccent[500]} !important`, backgroundColor: "transparent !important" },
             "& .ps-menu-button:hover": { backgroundColor: "transparent !important" },
           }}>

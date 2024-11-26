@@ -1,8 +1,10 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, useTheme, Button } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
+import { Link } from "react-router-dom";
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import Header from "../../components/Header";
 
 
@@ -42,7 +44,17 @@ const Clients = () => {
 
     return (
         <Box m={"20px"}>
-            <Header title={"Clientes"}/>
+          <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
+                <Header title="Clientes"/>
+                <Box sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
+                  <Link to={"/calendario"} style={{ textDecoration: "none", fontSize: "16px", color: colors.grey[100]}}>
+                    <Button sx={{backgroundColor: colors.blueAccent[700], color: "#fff", fontSize: "14px", fontWeight: "bold", padding: "10px 20px" }}>
+                      <AddCircleOutlineOutlinedIcon sx={{ mr: "10px" }} />
+                      Cadastro de Cliente
+                    </Button>
+                  </Link>
+                </Box>
+            </Box>
             <Box m={"40px 0 0 0"} height={"75vh"} sx={{
                 "& .MuiDataGrid-root": {border: "none"},
                 "& .MuiDataGrid-cell": {borderBottom: "none", fontSize: "14px"},
