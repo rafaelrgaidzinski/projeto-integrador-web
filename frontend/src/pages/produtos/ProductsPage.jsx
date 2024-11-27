@@ -13,13 +13,6 @@ const Products = () => {
     const colors = tokens(theme.palette.mode);
     const columns = [
         {
-          field: "barCode",
-          headerName: "Código de Barras",
-          type: "number",
-          headerAlign: "left",
-          align: "left",
-        },
-        {
           field: "product",
           headerName: "Produto",
           type: "string",
@@ -34,8 +27,28 @@ const Products = () => {
           align: "left",
         },
         {
-          field: "price",
-          headerName: "Preço",
+          field: "supplier",
+          headerName: "Fornecedor",
+          type: "string",
+          flex: 1,
+        },
+        {
+          field: "barCode",
+          headerName: "Código de Barras",
+          type: "number",
+          headerAlign: "left",
+          align: "left",
+        },
+        {
+          field: "purchaseprice",
+          headerName: "Preço de Compra",
+          type: "number",
+          headerAlign: "left",
+          align: "left",
+        },
+        {
+          field: "salesprice",
+          headerName: "Preço de Venda",
           type: "number",
           headerAlign: "left",
           align: "left",
@@ -46,12 +59,7 @@ const Products = () => {
           type: "number",
           flex: 1,
         },
-        {
-          field: "laboratory",
-          headerName: "Laboratório",
-          type: "string",
-          flex: 1,
-        },
+        
         {
           field: "freeprogram",
           headerName: "Farmácia Popular",

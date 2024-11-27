@@ -40,13 +40,13 @@ const ProductsForm = () => {
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Laboratório"
+                                label="Fornecedor"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.laboratory}
-                                name="laboratory"
-                                error={!!touched.laboratory && !!errors.laboratory}
-                                helperText={touched.laboratory && errors.laboratory}
+                                value={values.supplier}
+                                name="supplier"
+                                error={!!touched.supplier && !!errors.supplier}
+                                helperText={touched.supplier && errors.supplier}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
@@ -66,13 +66,26 @@ const ProductsForm = () => {
                                 fullWidth
                                 variant="filled"
                                 type="number"
-                                label="Preço"
+                                label="Preço de Compra"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.price}
-                                name="price"
-                                error={!!touched.price && !!errors.price}
-                                helperText={touched.price && errors.price}
+                                value={values.purchaseprice}
+                                name="purchaseprice"
+                                error={!!touched.purchaseprice && !!errors.purchaseprice}
+                                helperText={touched.purchaseprice && errors.purchaseprice}
+                                sx={{ gridColumn: "span 1" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="number"
+                                label="Preço de Venda"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.salesprice}
+                                name="salesprice"
+                                error={!!touched.salesprice && !!errors.salesprice}
+                                helperText={touched.salesprice && errors.salesprice}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
