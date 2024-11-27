@@ -1,8 +1,10 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataEmployees } from "../../data/mockData";
+import { Link } from "react-router-dom";
 import Header from "../../components/Header";
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
@@ -102,7 +104,7 @@ const Settings = () => {
               "& .MuiDataGrid-footerContainer": {borderTop: "none", backgroundColor: colors.blueAccent[700]},
               "& .MuiCheckbox-root": {color: `${colors.greenAccent[200]} !important`}
           }}>
-              <DataGrid checkboxSelection rows={mockDataEmployees} columns={columns}/>
+              <DataGrid rows={mockDataEmployees} columns={columns}/>
           </Box>
         </Box>
     )

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ColorModeContext, useMode } from './theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Route, Routes } from 'react-router';
@@ -15,14 +16,15 @@ import ProductsForm from './pages/produtos/ProductsForm';
 
 const App = () => {
   const [theme, colorMode] = useMode();
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <div className='app'>
-          <SidebarMenu/>
-            <main className='content'>
+          <SidebarMenu isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
+            <main className={isCollapsed ? 'content-collapsed' : 'content'}>
               <Topbar></Topbar>
               <Routes>
                 <Route path='/' element={<Dashboard/>} />
