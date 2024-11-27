@@ -26,22 +26,21 @@ const Item = ({ icon, title, to, selected, setSelected }) => {
   );
 };
 
-const SidebarMenu = () => {
+const SidebarMenu = ({isCollapsed, setIsCollapsed}) => {
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode)
-    const [isCollapsed, setIsCollapsed] = useState(false);
     const [selected, setSelected] = useState("Dashboard");
 
     return (
-        <Box sx={{ display: "flex", height: "100%",
+        <Box sx={{ display: "flex", height: "100%", position: "fixed",
             "& .MuiButtonBase-root .MuiSvgIcon-root": { color: `${colors.grey[100]} !important`, backgroundColor: "transparent !important",},
             "& .ps-menu-button.ps-active p": { color: `${colors.greenAccent[500]} !important`, backgroundColor: "transparent !important" },
             "& .ps-menu-button.ps-active svg": { color: `${colors.greenAccent[500]} !important`, backgroundColor: "transparent !important" },
             "& .ps-menu-button:hover": { backgroundColor: "transparent !important" },
           }}>
             
-          <Sidebar breakPoint="md" backgroundColor={colors.primary[400]} rootStyles={{border: "none"}} collapsed={isCollapsed}>
+          <Sidebar width={isCollapsed ? "6em" : "18em"} breakPoint="md" backgroundColor={colors.primary[400]} rootStyles={{border: "none" }} collapsed={isCollapsed} >
               <Menu iconShape="square" >
 
                 {/* LOGO AND MENU ICON */}
@@ -62,7 +61,7 @@ const SidebarMenu = () => {
 
                 {/* USER */}
                 {!isCollapsed && (
-                    <Box mb={"25px"}>
+                    <Box mb={"40px"}>
                         <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
                             <img alt="profile-user" width={"100px"} height={"100px"} src={`../../assets/user.png`} style={{cursor: "pointer", borderRadius:"50%" }}  />
                         </Box>
@@ -81,7 +80,7 @@ const SidebarMenu = () => {
                   <Item title="Fornecedores" to="/fornecedores" icon={<StoreOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Vendas" to="/vendas" icon={<AttachMoneyOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                   <Item title="Compras" to="/compras" icon={<ShoppingCartOutlinedIcon/>} selected={selected} setSelected={setSelected} />
-                  <Item title="Relatorios" to="/relatorios" icon={<AssessmentOutlinedIcon/>} selected={selected} setSelected={setSelected} />
+                  {/* <Item title="Relatorios" to="/relatorios" icon={<AssessmentOutlinedIcon/>} selected={selected} setSelected={setSelected} /> */}
                   <Item title="Configurações" to="/configuracoes" icon={<SettingsOutlinedIcon/>} selected={selected} setSelected={setSelected} />
                 </Box>
               </Menu>

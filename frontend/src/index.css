@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
-html, body, #root, .app, .content {
+html, body, #root, .app, .content{
   height: 100%;
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
@@ -9,6 +9,31 @@ html, body, #root, .app, .content {
 .app {
   display: flex;
   position: relative;
+}
+
+.content {
+  margin-left: 18em;
+  width: 93em;
+  transition: 0.3s;
+}
+
+.content-collapsed {
+  margin-left: 6em;
+  width: 105em;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 765px) {
+
+  .content {
+    margin-left: 0em;
+    width: 93em;
+  }
+
+  .content-collapsed {
+    margin-left: 0em;
+    width: 105em;
+  }
 }
 
 ::-webkit-scrollbar {

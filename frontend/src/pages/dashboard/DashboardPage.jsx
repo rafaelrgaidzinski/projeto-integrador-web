@@ -20,12 +20,6 @@ const Dashboard = () => {
         <Box m={"20px"}>
             <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
                 <Header title="Dashboard"/>
-                <Box>
-                    <Button sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontSize: "14px", fontWeight: "bold", padding: "10px 20px" }}>
-                        <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-                        Download Relatórios
-                    </Button>
-                </Box>
             </Box>
 
             {/* GRID & CHARTS */}
