@@ -53,14 +53,6 @@
 
 <br>
 
-### Modelagem do Banco de Dados
-
-<br>
-
-![modelagem-banco](https://github.com/user-attachments/assets/e50ed4dd-dfb8-4ec1-8dc1-9c7b90a973cb)
-
-<br>
-
 ### Arquitetura
 
 A arquitetura do sistema segue o padrão REST (Representational State Transfer), organizando o backend em uma estrutura de serviços desacoplados que interagem por meio de endpoints HTTP. Abaixo estão os principais componentes e suas funções:
@@ -70,6 +62,14 @@ A arquitetura do sistema segue o padrão REST (Representational State Transfer),
 **Backend**: Desenvolvido em Node.js com Express, o backend expõe uma API RESTful que opera com os recursos como citados anteriormente. Cada recurso é acessado por meio de endpoints padronizados (GET/POST/PUT/DELETE /recurso). A lógica de autenticação e autorização utiliza JSON Web Tokens (JWT) para proteger rotas e controlar acessos.
 
 **Banco de Dados**: O PostgreSQL é utilizado como o banco de dados relacional, armazenando informações estruturadas. O TypeORM é responsável pelo mapeamento objeto-relacional, simplificando a interação entre a API RESTful e o banco de dados.
+
+<br>
+
+### Modelagem do Banco de Dados
+
+<br>
+
+![modelagem-banco](https://github.com/user-attachments/assets/e50ed4dd-dfb8-4ec1-8dc1-9c7b90a973cb)
 
 <br>
 
