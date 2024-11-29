@@ -17,12 +17,12 @@ const ClientsForm = () => {
     }
 
     return (
-        <Box m={"30px"}>
+        <Box m={"10px 20px 0 20px"}>
             <Header title={"Cadastro de Clientes"}/>
             <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={userSchema}>
                 {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
-                        <Box display="grid" gap="40px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"60px"} }>
+                        <Box display="grid" gap="30px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"60px"} }>
                             <TextField
                                 fullWidth
                                 variant="filled"

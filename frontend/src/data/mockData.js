@@ -271,7 +271,7 @@ export const mockDataEmployees = [
 export const mockDataProducts = [
   {
     id: 1,
-    barcode: "1234567890123",
+    barcode: 1234567890123,
     product: "Paracetamol",
     category: "Analgésico",
     purchaseprice: 5.99,
@@ -283,7 +283,7 @@ export const mockDataProducts = [
   },
   {
     id: 2,
-    barcode: "2345678901234",
+    barcode: 2345678901234,
     product: "Ibuprofeno",
     category: "Analgésico",
     purchaseprice: 7.49,
@@ -295,7 +295,7 @@ export const mockDataProducts = [
   },
   {
     id: 3,
-    barcode: "3456789012345",
+    barcode: 3456789012345,
     product: "Dipirona",
     category: "Analgésico",
     purchaseprice: 3.99,
@@ -307,7 +307,7 @@ export const mockDataProducts = [
   },
   {
     id: 4,
-    barcode: "4567890123456",
+    barcode: 4567890123456,
     product: "Amoxicilina",
     category: "Antibiótico",
     purchaseprice: 15.99,
@@ -319,7 +319,7 @@ export const mockDataProducts = [
   },
   {
     id: 5,
-    barcode: "5678901234567",
+    barcode: 5678901234567,
     product: "Omeprazol",
     category: "Antiacido",
     purchaseprice: 10.49,
@@ -331,7 +331,7 @@ export const mockDataProducts = [
   },
   {
     id: 6,
-    barcode: "6789012345678",
+    barcode: 6789012345678,
     product: "Losartana",
     category: "Antihipertensivo",
     purchaseprice: 20.00,
@@ -343,7 +343,7 @@ export const mockDataProducts = [
   },
   {
     id: 7,
-    barcode: "7890123456789",
+    barcode: 7890123456789,
     product: "Loratadina",
     category: "Antialérgico",
     purchaseprice: 4.50,
@@ -355,7 +355,7 @@ export const mockDataProducts = [
   },
   {
     id: 8,
-    barcode: "8901234567890",
+    barcode: 8901234567890,
     product: "Cefalexina",
     category: "Antibiótico",
     purchaseprice: 12.00,
@@ -367,7 +367,7 @@ export const mockDataProducts = [
   },
   {
     id: 9,
-    barcode: "9012345678901",
+    barcode: 9012345678901,
     product: "Metformina",
     category: "Antidiabético",
     purchaseprice: 10.00,
@@ -379,7 +379,7 @@ export const mockDataProducts = [
   },
   {
     id: 10,
-    barcode: "0123456789012",
+    barcode: 1203456789012,
     product: "Atorvastatina",
     category: "Antilipêmico",
     purchaseprice: 8.99,
@@ -388,6 +388,117 @@ export const mockDataProducts = [
     supplier: "Laboratório E",
     freeprogram: false,
     recipe: true
+  }
+];
+
+export const mockDataSales = [
+  { 
+      id: 1,
+      product: "Shampoo Anticaspa",
+      supplier: "Fornecedora A",
+      barcode: "1234567890123",
+      freeprogram: false,
+      recipe: false,
+      price: 15.50,
+      quantity: 10,
+      total: 155.00
+  },
+  {   
+      id: 2,
+      product: "Sabonete Hidratante",
+      supplier: "Fornecedora B",
+      barcode: "9876543210987",
+      freeprogram: false,
+      recipe: false,
+      price: 8.99,
+      quantity: 20,
+      total: 179.80
+  },
+  {
+      id: 3,
+      product: "Condicionador Reparador",
+      supplier: "Fornecedora C",
+      barcode: "1230987654321",
+      freeprogram: false,
+      recipe: false,
+      price: 22.30,
+      quantity: 5,
+      total: 111.50
+  },
+  {
+      id: 4,
+      product: "Creme Dental",
+      supplier: "Fornecedora D",
+      barcode: "5647382912345",
+      freeprogram: false,
+      recipe: false,
+      price: 6.80,
+      quantity: 15,
+      total: 102.00
+  },
+  {
+      id: 5,
+      product: "Desodorante Aerosol",
+      supplier: "Fornecedora E",
+      barcode: "9081726345098",
+      freeprogram: false,
+      recipe: false,
+      price: 12.40,
+      quantity: 12,
+      total: 148.80
+  }
+];
+
+export const mockDataPurchase = [
+  { 
+      id: 1,
+      product: "Shampoo Anticaspa",
+      category: "Analgésico",
+      supplier: "Fornecedora A",
+      barcode: "1234567890123",
+      price: 15.50,
+      quantity: 10,
+      total: 155.00
+  },
+  {   
+      id: 2,
+      product: "Sabonete Hidratante",
+      category: "Analgésico",
+      supplier: "Fornecedora B",
+      barcode: "9876543210987",
+      price: 8.99,
+      quantity: 20,
+      total: 179.80
+  },
+  {
+      id: 3,
+      product: "Condicionador Reparador",
+      category: "Antiinflamatório",
+      supplier: "Fornecedora C",
+      barcode: "1230987654321",
+      price: 22.30,
+      quantity: 5,
+      total: 111.50
+  },
+  {
+      id: 4,
+      product: "Creme Dental",
+      category: "Analgésico",
+      supplier: "Fornecedora D",
+      barcode: "5647382912345",
+      price: 6.80,
+      quantity: 15,
+      total: 102.00
+  },
+  {
+      id: 5,
+      product: "Desodorante Aerosol",
+      category: "Analgésico",
+      supplier: "Fornecedora E",
+      barcode: "9081726345098",
+      price: 12.40,
+      quantity: 12,
+      total: 148.80
   }
 ];
 
@@ -524,32 +635,26 @@ export const mockBarData = [
 
 export const mockPieData = [
   {
-    id: "hack",
-    label: "hack",
+    id: "medicamentos",
+    label: "medicamentos",
     value: 239,
     color: "hsl(104, 70%, 50%)",
   },
   {
-    id: "make",
-    label: "make",
-    value: 170,
-    color: "hsl(162, 70%, 50%)",
-  },
-  {
-    id: "go",
-    label: "go",
+    id: "suplementos",
+    label: "suplementos",
     value: 322,
     color: "hsl(291, 70%, 50%)",
   },
   {
-    id: "lisp",
-    label: "lisp",
+    id: "higiene",
+    label: "higiene pessoal",
     value: 503,
     color: "hsl(229, 70%, 50%)",
   },
   {
-    id: "scala",
-    label: "scala",
+    id: "perfumaria",
+    label: "perfumaria",
     value: 584,
     color: "hsl(344, 70%, 50%)",
   },
@@ -557,165 +662,166 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "saldo",
+    color: tokens("dark").primary[100],
+    data: [
+      {
+        x: "janeiro",
+        y: 10000,
+      },
+      {
+        x: "fevereiro",
+        y: -5000,
+      },
+      {
+        x: "março",
+        y: 5000,
+      },
+      {
+        x: "abril",
+        y: 5000,
+      },
+      {
+        x: "maio",
+        y: 5000,
+      },
+      {
+        x: "junho",
+        y: 8000,
+      },
+      {
+        x: "julho",
+        y: 13000,
+      },
+      {
+        x: "agosto",
+        y: -5000,
+      },
+      {
+        x: "setembro",
+        y: 8000,
+      },
+      {
+        x: "outubro",
+        y: 4000,
+      },
+      {
+        x: "novembro",
+        y: 10000,
+      },
+      {
+        x: "dezembro",
+        y: 10000,
+      },
+    ],
+  },
+  {
+    id: "despesas",
+    color: tokens("dark").redAccent[500],
+    data: [
+      {
+        x: "janeiro",
+        y: 10000,
+      },
+      {
+        x: "fevereiro",
+        y: 20000,
+      },
+      {
+        x: "março",
+        y: 20000,
+      },
+      {
+        x: "abril",
+        y: 15000,
+      },
+      {
+        x: "maio",
+        y: 20000,
+      },
+      {
+        x: "junho",
+        y: 15000,
+      },
+      {
+        x: "julho",
+        y: 10000,
+      },
+      {
+        x: "agosto",
+        y: 22500,
+      },
+      {
+        x: "setembro",
+        y: 20000,
+      },
+      {
+        x: "outubro",
+        y: 15000,
+      },
+      {
+        x: "novembro",
+        y: 25000,
+      },
+      {
+        x: "dezembro",
+        y: 17500,
+      },
+    ],
+  },
+  {
+    id: "receitas",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
-        y: 101,
+        x: "janeiro",
+        y: 20000,
       },
       {
-        x: "helicopter",
-        y: 75,
+        x: "fevereiro",
+        y: 15000,
       },
       {
-        x: "boat",
-        y: 36,
+        x: "março",
+        y: 25000,
       },
       {
-        x: "train",
-        y: 216,
+        x: "abril",
+        y: 20000,
       },
       {
-        x: "subway",
-        y: 35,
+        x: "maio",
+        y: 30000,
       },
       {
-        x: "bus",
-        y: 236,
+        x: "junho",
+        y: 23000,
       },
       {
-        x: "car",
-        y: 88,
+        x: "julho",
+        y: 28000,
       },
       {
-        x: "moto",
-        y: 232,
+        x: "agosto",
+        y: 17500,
       },
       {
-        x: "bicycle",
-        y: 281,
+        x: "setembro",
+        y: 28000,
       },
       {
-        x: "horse",
-        y: 1,
+        x: "outubro",
+        y: 19000,
       },
       {
-        x: "skateboard",
-        y: 35,
+        x: "novembro",
+        y: 35000,
       },
       {
-        x: "others",
-        y: 14,
+        x: "dezembro",
+        y: 27500,
       },
     ],
   },
-  {
-    id: "france",
-    color: tokens("dark").blueAccent[300],
-    data: [
-      {
-        x: "plane",
-        y: 212,
-      },
-      {
-        x: "helicopter",
-        y: 190,
-      },
-      {
-        x: "boat",
-        y: 270,
-      },
-      {
-        x: "train",
-        y: 9,
-      },
-      {
-        x: "subway",
-        y: 75,
-      },
-      {
-        x: "bus",
-        y: 175,
-      },
-      {
-        x: "car",
-        y: 33,
-      },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
-      },
-    ],
-  },
-  {
-    id: "us",
-    color: tokens("dark").redAccent[200],
-    data: [
-      {
-        x: "plane",
-        y: 191,
-      },
-      {
-        x: "helicopter",
-        y: 136,
-      },
-      {
-        x: "boat",
-        y: 91,
-      },
-      {
-        x: "train",
-        y: 190,
-      },
-      {
-        x: "subway",
-        y: 211,
-      },
-      {
-        x: "bus",
-        y: 152,
-      },
-      {
-        x: "car",
-        y: 189,
-      },
-      {
-        x: "moto",
-        y: 152,
-      },
-      {
-        x: "bicycle",
-        y: 8,
-      },
-      {
-        x: "horse",
-        y: 197,
-      },
-      {
-        x: "skateboard",
-        y: 107,
-      },
-      {
-        x: "others",
-        y: 170,
-      },
-    ],
-  },
+  
 ];

@@ -13,6 +13,8 @@ import SuppliersForm from './pages/fornecedores/SuppliersForm';
 import EmployeesForm from "./pages/configuracoes/EmployeesForm";
 import Products from "./pages/produtos/ProductsPage";
 import ProductsForm from './pages/produtos/ProductsForm';
+import Sales from "./pages/vendas/SalesPage";
+import Compras from "./pages/compras/PurchasePage";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -36,6 +38,8 @@ const App = () => {
                 <Route path='/clientes/cadastro' element={<ClientsForm/>} />
                 <Route path='/fornecedores' element={<Suppliers/>} />
                 <Route path='/fornecedores/cadastro' element={<SuppliersForm/>} />
+                <Route path='/vendas' element={<Sales/>} />
+                <Route path='/compras' element={<Compras/>} />
               </Routes>
             </main>
         </div>

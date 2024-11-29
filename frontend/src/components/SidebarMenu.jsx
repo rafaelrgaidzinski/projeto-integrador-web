@@ -33,14 +33,14 @@ const SidebarMenu = ({isCollapsed, setIsCollapsed}) => {
     const [selected, setSelected] = useState("Dashboard");
 
     return (
-        <Box sx={{ display: "flex", height: "100%", position: "fixed",
+        <Box sx={{ display: "flex", height: "100%", position: "fixed", 
             "& .MuiButtonBase-root .MuiSvgIcon-root": { color: `${colors.grey[100]} !important`, backgroundColor: "transparent !important",},
             "& .ps-menu-button.ps-active p": { color: `${colors.greenAccent[500]} !important`, backgroundColor: "transparent !important" },
             "& .ps-menu-button.ps-active svg": { color: `${colors.greenAccent[500]} !important`, backgroundColor: "transparent !important" },
             "& .ps-menu-button:hover": { backgroundColor: "transparent !important" },
           }}>
             
-          <Sidebar width={isCollapsed ? "6em" : "18em"} breakPoint="md" backgroundColor={colors.primary[400]} rootStyles={{border: "none" }} collapsed={isCollapsed} >
+          <Sidebar breakPoint="md" backgroundColor={colors.primary[400]} rootStyles={{border: "none" }} collapsed={isCollapsed} >
               <Menu iconShape="square" >
 
                 {/* LOGO AND MENU ICON */}

@@ -1,10 +1,12 @@
 import { Box, useTheme, Button } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridActionsCellItem } from "@mui/x-data-grid";
 import { GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataSuppliers } from "../../data/mockData";
 import { Link } from "react-router-dom";
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/DeleteOutlined';
 import Header from "../../components/Header";
 
 
@@ -49,11 +51,36 @@ const Supplier = () => {
           field: "delivery",
           headerName: "Prazo de Entrega",
           flex: 1,
+        },
+        {
+          field: 'actions',
+          type: 'actions',
+          headerName: 'Ações',
+          width: 100,
+          cellClassName: 'actions',
+          getActions: ({ id }) => {
+
+            return [
+              <GridActionsCellItem
+                icon={<EditIcon />}
+                label="Edit"
+                className="textPrimary"
+                onClick={handleEditClick(id)}
+                color="inherit"
+              />,
+              <GridActionsCellItem
+                icon={<DeleteIcon />}
+                label="Delete"
+                onClick={handleDeleteClick(id)}
+                color="inherit"
+              />,
+            ];
+          },
         }
       ];
 
     return (
-        <Box m={"20px"}>
+        <Box m={"10px 20px 0 20px"}>
           <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
                 <Header title="Fornecedores"/>
                 <Box sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
@@ -75,10 +102,18 @@ const Supplier = () => {
                 "& .MuiCheckbox-root": {color: `${colors.greenAccent[200]} !important`},
                 "& .MuiDataGrid-toolbarContainer .MuiButton-text": {color: `${colors.grey[100]} !important`}
             }}>
-                <DataGrid checkboxSelection rows={mockDataSuppliers} columns={columns} slots={{ toolbar: GridToolbar }} slotProps={{ toolbar: {showQuickFilter: true }}}/>
+                <DataGrid rows={mockDataSuppliers} columns={columns} slots={{ toolbar: GridToolbar }} slotProps={{ toolbar: {showQuickFilter: true }}}/>
             </Box>
         </Box>
     )
 }
+
+const handleEditClick = (id) => () => {
+  console.log(id)
+};
+
+const handleDeleteClick = (id) => () => {
+  console.log(id)
+};
 
 export default Supplier;

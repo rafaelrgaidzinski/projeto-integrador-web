@@ -17,12 +17,12 @@ const ClientsForm = () => {
     }
 
     return (
-        <Box m={"30px"}>
+        <Box m={"10px 20px 0 20px"}>
             <Header title={"Cadastro de Fornecedores"}/>
             <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={userSchema}>
                 {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
-                        <Box display="grid" gap="40px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"60px"} }>
+                        <Box display="grid" gap="27px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"40px"} }>
                             <TextField
                                 fullWidth
                                 variant="filled"
@@ -53,19 +53,6 @@ const ClientsForm = () => {
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Responsável"
-                                onBlur={handleBlur}
-                                onChange={handleChange}
-                                value={values.inCharge}
-                                name="inCharge"
-                                error={!!touched.inCharge && !!errors.inCharge}
-                                helperText={touched.inCharge && errors.inCharge}
-                                sx={{ gridColumn: "span 2" }}
-                            />
-                            <TextField
-                                fullWidth
-                                variant="filled"
-                                type="text"
                                 label="Telefone"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
@@ -74,6 +61,19 @@ const ClientsForm = () => {
                                 error={!!touched.phone && !!errors.phone}
                                 helperText={touched.phone && errors.phone}
                                 sx={{ gridColumn: "span 1" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Responsável"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.inCharge}
+                                name="inCharge"
+                                error={!!touched.inCharge && !!errors.inCharge}
+                                helperText={touched.inCharge && errors.inCharge}
+                                sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                                 fullWidth
@@ -99,7 +99,7 @@ const ClientsForm = () => {
                                 name="payment"
                                 error={!!touched.payment && !!errors.payment}
                                 helperText={touched.payment && errors.payment}
-                                sx={{ gridColumn: "span 3" }}
+                                sx={{ gridColumn: "span 2" }}
                             />
                              <TextField
                                 fullWidth
@@ -193,8 +193,8 @@ const ClientsForm = () => {
                                 sx={{ gridColumn: "span 1" }}
                             />
                         </Box>
-                        <Box display="flex" justifyContent="end" mt="60px" sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
-                            <Button type="submit" variant="contained" sx={{backgroundColor: colors.blueAccent[700], color: "#fff", fontSize: "14px", fontWeight: "bold", padding: "10px 20px", width: "200px", mb:"30px"}}>
+                        <Box display="flex" justifyContent="end" mt="30px" sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
+                            <Button type="submit" variant="contained" sx={{backgroundColor: colors.blueAccent[700], color: "#fff", fontSize: "14px", fontWeight: "bold", padding: "10px 20px", width: "200px"}}>
                                 <SaveOutlinedIcon sx={{ mr: "10px" }} />
                                 Salvar
                             </Button>

@@ -83,7 +83,7 @@ const Settings = () => {
       ];
 
     return (
-        <Box m={"20px"}>
+        <Box m={"10px 20px 0 20px"}>
           <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
               <Header title="Configurações"/>
               <Box sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
@@ -95,7 +95,7 @@ const Settings = () => {
                 </Link>
               </Box>
           </Box>
-          <Box m={"40px 0 0 0"} height={"75vh"} sx={{
+          <Box m={"10px 0 0 0"} height={"40vh"} sx={{
               "& .MuiDataGrid-root": {border: "none"},
               "& .MuiDataGrid-cell": {borderBottom: "none", fontSize: "14px"},
               "& .name-column--cell": {color: colors.greenAccent[500]},

@@ -17,12 +17,12 @@ const ProductsForm = () => {
     }
 
     return (
-        <Box m={"30px"}>
+        <Box m={"10px 20px 0 20px"}>
             <Header title={"Cadastro de Produtos"}/>
             <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={userSchema}>
                 {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
-                        <Box display="grid" gap="40px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"60px"} }>
+                        <Box display="grid" gap="30px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"60px"} }>
                             <TextField
                                 fullWidth
                                 variant="filled"
@@ -40,13 +40,13 @@ const ProductsForm = () => {
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Fornecedor"
+                                label="Categoria"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.supplier}
-                                name="supplier"
-                                error={!!touched.supplier && !!errors.supplier}
-                                helperText={touched.supplier && errors.supplier}
+                                value={values.category}
+                                name="category"
+                                error={!!touched.category && !!errors.category}
+                                helperText={touched.category && errors.category}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
@@ -56,10 +56,10 @@ const ProductsForm = () => {
                                 label="Código de Barra"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.barCode}
-                                name="barCode"
-                                error={!!touched.barCode && !!errors.barCode}
-                                helperText={touched.barCode && errors.barCode}
+                                value={values.barcode}
+                                name="barcode"
+                                error={!!touched.barcode && !!errors.barcode}
+                                helperText={touched.barcode && errors.barcode}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
@@ -88,17 +88,17 @@ const ProductsForm = () => {
                                 helperText={touched.salesprice && errors.salesprice}
                                 sx={{ gridColumn: "span 1" }}
                             />
-                            <TextField
+                             <TextField
                                 fullWidth
                                 variant="filled"
                                 type="text"
-                                label="Categoria"
+                                label="Fornecedor"
                                 onBlur={handleBlur}
                                 onChange={handleChange}
-                                value={values.category}
-                                name="category"
-                                error={!!touched.category && !!errors.category}
-                                helperText={touched.category && errors.category}
+                                value={values.supplier}
+                                name="supplier"
+                                error={!!touched.supplier && !!errors.supplier}
+                                helperText={touched.supplier && errors.supplier}
                                 sx={{ gridColumn: "span 2" }}
                             />
                             <TextField

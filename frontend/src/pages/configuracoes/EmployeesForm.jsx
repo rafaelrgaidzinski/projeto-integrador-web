@@ -17,12 +17,12 @@ const EmployeesForm = () => {
     }
 
     return (
-        <Box m={"30px"}>
+        <Box m={"10px 20px 0 20px"}>
             <Header title={"Cadastro de Funcionários"}/>
             <Formik onSubmit={handleFormSubmit} initialValues={initialValues} validationSchema={userSchema}>
                 {({ values, errors, touched, handleBlur, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
-                        <Box display="grid" gap="40px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"60px"} }>
+                        <Box display="grid" gap="27px" gridTemplateColumns="repeat(4, minmax(0, 1fr))" sx={{ "& > div": { gridColumn: isNonMobile ? undefined : "span 4" }, mt:"40px"} }>
                             <TextField
                                 fullWidth
                                 variant="filled"
@@ -47,6 +47,19 @@ const EmployeesForm = () => {
                                 name="cpf"
                                 error={!!touched.cpf && !!errors.cpf}
                                 helperText={touched.cpf && errors.cpf}
+                                sx={{ gridColumn: "span 1" }}
+                            />
+                            <TextField
+                                fullWidth
+                                variant="filled"
+                                type="text"
+                                label="Data de Contratação"
+                                onBlur={handleBlur}
+                                onChange={handleChange}
+                                value={values.hiredate}
+                                name="hiredate"
+                                error={!!touched.hiredate && !!errors.hiredate}
+                                helperText={touched.hiredate && errors.hiredate}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
@@ -99,19 +112,6 @@ const EmployeesForm = () => {
                                 name="salary"
                                 error={!!touched.salary && !!errors.salary}
                                 helperText={touched.salary && errors.salary}
-                                sx={{ gridColumn: "span 1" }}
-                            />
-                            <TextField
-                                fullWidth
-                                variant="filled"
-                                type="text"
-                                label="Data de Contratação"
-                                onBlur={handleBlur}
-                                onChange={handleChange}
-                                value={values.hiredate}
-                                name="hiredate"
-                                error={!!touched.hiredate && !!errors.hiredate}
-                                helperText={touched.hiredate && errors.hiredate}
                                 sx={{ gridColumn: "span 1" }}
                             />
                             <TextField
@@ -193,8 +193,8 @@ const EmployeesForm = () => {
                                 sx={{ gridColumn: "span 1" }}
                             />
                         </Box>
-                        <Box display="flex" justifyContent="end" mt="60px" sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
-                            <Button type="submit" variant="contained" sx={{backgroundColor: colors.blueAccent[700], color: "#fff", fontSize: "14px", fontWeight: "bold", padding: "10px 20px", width: "200px", mb:"30px"}}>
+                        <Box display="flex" justifyContent="end" mt="30px" sx={{"& .MuiButtonBase-root:hover": { backgroundColor: `${colors.blueAccent[600]} !important` }}}>
+                            <Button type="submit" variant="contained" sx={{backgroundColor: colors.blueAccent[700], color: "#fff", fontSize: "14px", fontWeight: "bold", padding: "10px 20px", width: "200px"}}>
                                 <SaveOutlinedIcon sx={{ mr: "10px" }} />
                                 Salvar
                             </Button>
